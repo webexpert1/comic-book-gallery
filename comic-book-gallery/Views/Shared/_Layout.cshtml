@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Comic Book Gallery</title>
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+           
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @Html.ActionLink("Comic Book Gallery", "Index", "ComicBooks")
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Comic Book Gallery</p>
+        </footer>
+
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js">
+
+    </script>
+</body>
+</html>
